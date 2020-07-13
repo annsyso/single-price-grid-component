@@ -29,163 +29,24 @@ body {
     height: 100vh;
 }
 
-/* mobile and small screens under 425 */
-
-@media all and (max-width: 425px) {
-
-    .main-container {
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border-radius: 10px;
-        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-        margin: 50px;
-        top: 0;
-        left: 0;
-        position: absolute;
-    }
-
-    .top-section {
-        display: flex;
-        flex-direction: column;
-        padding: 20px 30px;
-        color: var(--gray-blue);
-    }
-
-    .bottom-section {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .top-section h3 {
-        color: var(--cyan);
-        padding: 15px 0;
-        font-size: 1.4rem;
-    }
-    
-    .top-section p {
-        padding: 5px 0;
-        line-height: 1.7;
-    }
-    
-    p.green {
-        color: var(--bright-yellow)
-    }
-    
-    li {
-        list-style: none;
-    }
-
-    #left, #right {
-        width: 100%;
-        font-size: .9rem;
-        display: flex;
-        text-align: left;
-        color: #fff;
-        padding: 30px;
-    }
-    
-    #left {
-        background-color: var(--cyan);
-    }
-    
-    #right {
-        background-color: hsla(179, 62%, 43%, .7);
-        border-radius: 0 0 10px 10px;
-    }
-    
-    
-    .left-section h4,
-    .right-section h4  {
-        font-size: 1rem;
-    }
-    
-    .money-section {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-    }
-    
-    .money-section p {
-        margin-right: 10px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-    
-    .money-section .number {
-        color: #fff;
-        font-size: 1.7rem;
-    
-    }
-    
-    /* left section button */
-    
-    .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin: 20px 0 0 0;
-        width: 100%;
-    }
-    
-    a {
-        text-decoration: none;
-        color: #fff;
-        background-color: var(--bright-yellow);
-        width: 100%;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* right section */
-    
-    .right-section ul {
-        margin-top: 20px;
-    }
-    
-    .right-section li {
-        color: rgba(255, 255, 255, 0.6);
-        line-height: 1.4;
-    }
-
-    .left-section,
-    .right-section {
-        width: 100%;
-    }
-
-}
-
-/* large screens over 425 px */
-
-@media all and (min-width: 426px) {
-
-
 .main-container {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 100vh;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 
 .top-section {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 20px 30px;
     color: var(--gray-blue);
 }
 
 .bottom-section {
     display: flex;
-    justify-content: center;
 }
-
-/* top section styles */
 
 .top-section h3 {
     color: var(--cyan);
@@ -195,7 +56,6 @@ body {
 
 .top-section p {
     padding: 5px 0;
-    line-height: 1.5;
 }
 
 p.green {
@@ -206,27 +66,22 @@ li {
     list-style: none;
 }
 
-/* left section styles */
-
 #left, #right {
     width: 100%;
     font-size: .9rem;
     display: flex;
     text-align: left;
     color: #fff;
-    padding: 40px 30px;
+    padding: 30px;
 }
 
 #left {
     background-color: var(--cyan);
-    border-radius: 0 0 0 10px;
 }
 
 #right {
     background-color: hsla(179, 62%, 43%, .7);
-    border-radius: 0 0 10px 0;
 }
-
 
 .left-section h4,
 .right-section h4  {
@@ -250,14 +105,11 @@ li {
 
 }
 
-/* left section button */
-
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 30px 0 0 0;
 }
 
 a {
@@ -270,8 +122,6 @@ a {
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* right section */
-
 .right-section ul {
     margin-top: 20px;
 }
@@ -279,6 +129,75 @@ a {
 .right-section li {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
+}
+
+
+/* mobile and small screens under 425 */
+
+@media all and (max-width: 425px) {
+
+    .main-container {
+        justify-content: center;
+        margin: 50px;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+    }
+    
+    .top-section p {
+        line-height: 1.7;
+    }
+    
+    #right {
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .button {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+}
+
+/* large screens over 425 px */
+
+@media all and (min-width: 426px) {
+
+.main-container {
+    max-width: 100vh;
+}
+
+.top-section {
+    width: 100%;
+}
+
+.bottom-section {
+    justify-content: center;
+}
+
+.top-section p {
+    line-height: 1.5;
+}
+
+#left {
+    border-radius: 0 0 0 10px;
+}
+
+#right {
+    border-radius: 0 0 10px 0;
+}
+
+.button {
+    margin: 30px 0 0 0;
 }
 
 }
