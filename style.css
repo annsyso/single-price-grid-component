@@ -1,0 +1,126 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700 */
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --gray-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    max-width: 80vh;
+    border-radius: 10px;
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    padding: 2.5rem;
+    color: var(--gray-blue);
+}
+
+.bottom-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: var(--cyan);
+    padding: 2.5rem;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+/* top section styles */
+
+.top-section h3 {
+    color: var(--cyan);
+    padding: 10px 0;
+}
+
+.top-section p {
+    padding: 5px 0;
+    line-height: 1.5;
+}
+
+p.green {
+    color: var(--bright-yellow)
+}
+
+li {
+    list-style: none;
+}
+
+/* left section styles */
+
+.left-section {
+    background-color: var(--cyan);
+}
+
+.money-section {
+    display: flex;
+    align-items: center;
+}
+
+.money-section p {
+    padding-right: 5px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.money-section .number {
+    color: #fff;
+    font-size: 1.7rem;
+
+;}
+
