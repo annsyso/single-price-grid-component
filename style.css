@@ -30,6 +30,8 @@ The designs were created to the following widths:
 - Family: [Karla](https://fonts.google.com/specimen/Karla)
 - Weights: 400, 700 */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
 :root {
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
@@ -41,6 +43,7 @@ The designs were created to the following widths:
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
 }
 
 html {
@@ -60,13 +63,15 @@ body {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    max-width: 80vh;
     border-radius: 10px;
+    max-width: 90vh;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 
 .top-section {
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding-bottom: 2rem;
     padding: 2.5rem;
     color: var(--gray-blue);
@@ -74,19 +79,16 @@ body {
 
 .bottom-section {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: var(--cyan);
-    padding: 2.5rem;
-    color: #fff;
-    border-radius: 0 0 10px 10px;
+    justify-content: center;
 }
+
 
 /* top section styles */
 
 .top-section h3 {
     color: var(--cyan);
-    padding: 10px 0;
+    padding: 15px 0;
+    font-size: 1.4rem;
 }
 
 .top-section p {
@@ -104,17 +106,39 @@ li {
 
 /* left section styles */
 
-.left-section {
+#left, #right {
+    width: 100%;
+    font-size: .9rem;
+    display: flex;
+    text-align: left;
+    color: #fff;
+    padding: 40px 30px;
+}
+
+#left {
     background-color: var(--cyan);
+    border-radius: 0 0 0 10px;
+}
+
+#right {
+    background-color: hsla(179, 62%, 43%, .7);
+    border-radius: 0 0 10px 0;
+}
+
+
+.left-section h4,
+.right-section h4  {
+    font-size: 1rem;
 }
 
 .money-section {
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
 
 .money-section p {
-    padding-right: 5px;
+    margin-right: 10px;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -122,5 +146,37 @@ li {
     color: #fff;
     font-size: 1.7rem;
 
-;}
+}
+
+/* left section button */
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--bright-yellow);
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* right section */
+
+.right-section ul {
+    margin-top: 20px;
+}
+
+.right-section li {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+}
+
 
