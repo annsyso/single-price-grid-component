@@ -1,34 +1,4 @@
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Cyan: hsl(179, 62%, 43%)
-- Bright Yellow: hsl(71, 73%, 54%)
-
-### Neutral
-
-- Light Gray: hsl(204, 43%, 93%)
-- Grayish Blue: hsl(218, 22%, 67%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 16px
-
-### Font
-
-- Family: [Karla](https://fonts.google.com/specimen/Karla)
-- Weights: 400, 700 */
+/* Universal Styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
@@ -59,12 +29,146 @@ body {
     height: 100vh;
 }
 
+/* mobile and small screens under 425 */
+
+@media all and (max-width: 425px) {
+
+    .main-container {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+        margin: 50px;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .top-section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        color: var(--gray-blue);
+    }
+
+    .bottom-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .top-section h3 {
+        color: var(--cyan);
+        padding: 15px 0;
+        font-size: 1.4rem;
+    }
+    
+    .top-section p {
+        padding: 5px 0;
+        line-height: 1.7;
+    }
+    
+    p.green {
+        color: var(--bright-yellow)
+    }
+    
+    li {
+        list-style: none;
+    }
+
+    #left, #right {
+        width: 100%;
+        font-size: .9rem;
+        display: flex;
+        text-align: left;
+        color: #fff;
+        padding: 30px;
+    }
+    
+    #left {
+        background-color: var(--cyan);
+    }
+    
+    #right {
+        background-color: hsla(179, 62%, 43%, .7);
+        border-radius: 0 0 10px 10px;
+    }
+    
+    
+    .left-section h4,
+    .right-section h4  {
+        font-size: 1rem;
+    }
+    
+    .money-section {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    .money-section p {
+        margin-right: 10px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .money-section .number {
+        color: #fff;
+        font-size: 1.7rem;
+    
+    }
+    
+    /* left section button */
+    
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+        background-color: var(--bright-yellow);
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* right section */
+    
+    .right-section ul {
+        margin-top: 20px;
+    }
+    
+    .right-section li {
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.4;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+}
+
+/* large screens over 425 px */
+
+@media all and (min-width: 426px) {
+
+
 .main-container {
     background-color: #fff;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 90vh;
+    max-width: 100vh;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -72,8 +176,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding-bottom: 2rem;
-    padding: 2.5rem;
+    padding: 20px 30px;
     color: var(--gray-blue);
 }
 
@@ -81,7 +184,6 @@ body {
     display: flex;
     justify-content: center;
 }
-
 
 /* top section styles */
 
@@ -177,6 +279,8 @@ a {
 .right-section li {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
+}
+
 }
 
 
